@@ -20,20 +20,34 @@ Prevents silent API response shape changes that crash frontend consumers.
 
 ### Claude Code
 
-Copy any skill folder into `~/.claude/skills/`:
-
 ```bash
-cp -r skills/preserve-api-contract ~/.claude/skills/
+git clone https://github.com/BhaskarDey772/agent-skills.git /tmp/agent-skills
+cp -r /tmp/agent-skills/skills/preserve-api-contract ~/.claude/skills/
 ```
 
 ### VS Code / GitHub Copilot
 
-Copy into `.agents/skills/` in your project root:
-
 ```bash
-cp -r skills/preserve-api-contract .agents/skills/
+git clone https://github.com/BhaskarDey772/agent-skills.git /tmp/agent-skills
+cp -r /tmp/agent-skills/skills/preserve-api-contract .agents/skills/
 ```
 
 ### Any agentskills-compatible client
 
-Copy the skill folder into the skills directory your client reads from. See [agentskills.io](https://agentskills.io) for client-specific paths.
+```bash
+git clone https://github.com/BhaskarDey772/agent-skills.git /tmp/agent-skills
+# copy the skill folder into your client's skills directory
+cp -r /tmp/agent-skills/skills/preserve-api-contract <your-skills-dir>/
+```
+
+See [agentskills.io](https://agentskills.io) for client-specific paths.
+
+## Usage
+
+Once installed, the skill activates automatically when your AI assistant detects you are editing a backend route or service. No manual trigger needed.
+
+To invoke it explicitly in Claude Code:
+
+```
+use preserve-api-contract
+```
