@@ -1,6 +1,10 @@
 ---
 name: preserve-api-contract
 description: Use when modifying any backend route, controller, or service that returns a response — prevents silent API contract breakage that crashes frontend consumers.
+license: MIT
+metadata:
+  author: BhaskarDey772
+  version: "1.0"
 ---
 
 # Preserve API Contract
