@@ -1,5 +1,7 @@
 # Agent Skills
 
+[![skills.sh](https://skills.sh/b/BhaskarDey772/agent-skills)](https://skills.sh/BhaskarDey772/agent-skills)
+
 A collection of reusable [Agent Skills](https://agentskills.io) for AI coding assistants (Claude Code, GitHub Copilot, Codex, etc.).
 
 ## Skills
@@ -18,29 +20,27 @@ Prevents silent API response shape changes that crash frontend consumers.
 
 ## Installation
 
-### Claude Code
+### Via skills CLI (recommended)
+
+```bash
+npx skills add BhaskarDey772/agent-skills
+```
+
+### Manual — Claude Code
 
 ```bash
 git clone https://github.com/BhaskarDey772/agent-skills.git /tmp/agent-skills
 cp -r /tmp/agent-skills/skills/preserve-api-contract ~/.claude/skills/
 ```
 
-### VS Code / GitHub Copilot
+### Manual — VS Code / GitHub Copilot
 
 ```bash
 git clone https://github.com/BhaskarDey772/agent-skills.git /tmp/agent-skills
 cp -r /tmp/agent-skills/skills/preserve-api-contract .agents/skills/
 ```
 
-### Any agentskills-compatible client
-
-```bash
-git clone https://github.com/BhaskarDey772/agent-skills.git /tmp/agent-skills
-# copy the skill folder into your client's skills directory
-cp -r /tmp/agent-skills/skills/preserve-api-contract <your-skills-dir>/
-```
-
-See [agentskills.io](https://agentskills.io) for client-specific paths.
+See [agentskills.io](https://agentskills.io) for other client paths.
 
 ## Usage
 
